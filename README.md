@@ -34,6 +34,20 @@ Installation via autotools:
 
 Alternatively you may copy the `Arc` folder to `~/.icons` or to `/usr/share/icons` for system-wide use.
 
+#### Packages
+
+Prebuilt packages for Ubuntu, Debian, Fedora and openSUSE are currently not available.
+
+--
+
+Arch Linux users can install the theme from the AUR
+
+**Official Releases**: https://aur.archlinux.org/packages/arc-icon-theme/ 
+
+**Development Releases**: https://aur.archlinux.org/packages/arc-icon-theme-git/
+
+**Note:** If you're having trouble with the AUR packages please email the package maintainer at bil.elmoussaoui@gmail.com before creating an issue.
+
 ### Uninstall
 
 Run
