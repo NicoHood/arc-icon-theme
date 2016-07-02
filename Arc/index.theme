@@ -1,6 +1,6 @@
 [Icon Theme]
 Name=Arc
-Inherits=Moka,elementary,Adwaita,gnome,hicolor
+Inherits=Moka,Faba,elementary,Adwaita,gnome,hicolor
 Comment=Arc Icon theme
 
 #Directory list
