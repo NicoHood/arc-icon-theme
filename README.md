@@ -1,8 +1,8 @@
-# Papiro Icon Theme
+# Elementary Arc
 
 **Note:** This is still a beta fork from an unfinished work.
 
-At the moment this theme mainly includes icons for folders and mimetypes. I aim to include icons from xfce-elementary, elementary and elementary-plus icons.
+At the moment this icon theme mainly includes icons for folders and mimetypes. I aim to include icons from xfce-elementary, elementary and elementary-plus icons.
 
 ### Requirements
 
