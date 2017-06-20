@@ -1,8 +1,8 @@
-# Arc Icon Theme
+# Nebula Icon Theme
 
-**Note:** This is still unfinished. It may not work as expected in some cases.
+**Note:** This is still a beta fork from an unfinished work.
 
-At the moment this theme mainly includes icons for folders and mimetypes.
+At the moment this theme mainly includes icons for folders and mimetypes. I aim to include icons from xfce-elementary, elementary and elementary-plus icons.
 
 ### Requirements
 
