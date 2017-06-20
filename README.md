@@ -1,4 +1,4 @@
-# Nebula Icon Theme
+# Papiro Icon Theme
 
 **Note:** This is still a beta fork from an unfinished work.
 
