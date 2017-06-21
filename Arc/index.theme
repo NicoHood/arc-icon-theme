@@ -1,6 +1,6 @@
 [Icon Theme]
 Name=Elementary Arc
-Inherits=elementary-xfce-dark,Adwaita,gnome,hicolor
+Inherits=elementary-xfce,Adwaita,gnome,hicolor
 Comment= an icon theme based on Arc and fullfiled with Elementary icons
 
 #Directory list
