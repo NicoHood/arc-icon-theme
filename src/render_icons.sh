@@ -1,7 +1,6 @@
 #!/bin/bash
 
 INKSCAPE="/usr/bin/inkscape"
-OPTIPNG="/usr/bin/optipng"
 
 pushd `dirname $0` > /dev/null
 DIR="$( cd "$(dirname "$0")" ; pwd -P )"
@@ -9,62 +8,73 @@ popd > /dev/null
 
 cd ${DIR}
 
+TYPES=(actions apps categories devices emblems mimetypes places status)
+SIZES=(16 22 24 32 48 64 96 128)
+
 THEMEDIR=../Arc
 
-mkdir -p $THEMEDIR
+# Set up all the folders in the theme directory.
+mkdir -p $THEMEDIR/{actions,apps,categories,devices,emblems,mimetypes,places,status}/{16,22,24,32,48,64,96,128}{,@2x}
 
-for CONTEXT in actions apps categories devices emblems mimetypes places status
+cp -u index.theme $THEMEDIR/index.theme
+
+for CONTEXT in ${TYPES[@]}
 do
-
-    mkdir -p $THEMEDIR/$CONTEXT
-    mkdir -p $THEMEDIR/$CONTEXT
-
-    cp -r $CONTEXT/symbolic $THEMEDIR/$CONTEXT
-
-    for SIZE in 16 22 24 32 48 64 96 128
+    for SIZE in ${SIZES[@]}
     do
-        $INKSCAPE -S $CONTEXT.svg | grep -E "_$SIZE" | sed 's/\,.*$//' > index.tmp
-
-        mkdir -p $THEMEDIR/$CONTEXT/$SIZE
-        mkdir -p $THEMEDIR/$CONTEXT/$SIZE@2x
-
-        cp -r $CONTEXT/symlinks/* $THEMEDIR/$CONTEXT/$SIZE
-        cp -r $CONTEXT/symlinks/* $THEMEDIR/$CONTEXT/$SIZE@2x
-
-        for OBJECT_ID in `cat index.tmp`
-        do
-
-            ICON_NAME=$(sed "s/\_$SIZE.*$//" <<< $OBJECT_ID)
-
-            if [ -f $THEMEDIR/$CONTEXT/$SIZE/$ICON_NAME.png ]; then
-                echo $THEMEDIR/$CONTEXT/$SIZE/$ICON_NAME.png exists.
-            else
-                echo
-                echo Rendering $THEMEDIR/$CONTEXT/$SIZE/$ICON_NAME.png
-                $INKSCAPE --export-id=$OBJECT_ID \
-                          --export-id-only \
-                          --export-png=$THEMEDIR/$CONTEXT/$SIZE/$ICON_NAME.png $CONTEXT.svg >/dev/null \
-                && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i.png 
-            fi
-            if [ -f $THEMEDIR/$CONTEXT/$SIZE@2x/$ICON_NAME.png ]; then
-                echo $THEMEDIR/$CONTEXT/$SIZE@2x/$ICON_NAME.png exists.
-            else
-                echo
-                echo Rendering $THEMEDIR/$CONTEXT/$SIZE@2x/$ICON_NAME.png
-                $INKSCAPE --export-id=$OBJECT_ID \
-                          --export-dpi=180 \
-                          --export-id-only \
-                          --export-png=$THEMEDIR/$CONTEXT/$SIZE@2x/$ICON_NAME.png $CONTEXT.svg >/dev/null \
-                && $OPTIPNG -o7 --quiet $ASSETS_DIR/$i@2.png 
-            fi
-        done
+        cp -ru $CONTEXT/symlinks/* $THEMEDIR/$CONTEXT/$SIZE
+        cp -ru $CONTEXT/symlinks/* $THEMEDIR/$CONTEXT/$SIZE@2x
+        cp -ru $CONTEXT/symbolic $THEMEDIR/$CONTEXT
     done
 done
 
-rm index.tmp
-cp index.theme $THEMEDIR/index.theme
 rm -rf $THEMEDIR/actions/{32,32@2x,48,48@2x,64,64@2x,96,96@2x,128,128@2x} # derp
 
 # TODO
-cp -r animations $THEMEDIR/.
-cp -r panel $THEMEDIR/.
+cp -ru animations $THEMEDIR/.
+cp -ru panel $THEMEDIR/.
+
+
+# Generates inkscape export commands for the given
+# svg-file that can be piped to inkscape.
+genInkscapeCmds() {
+
+    local CONTEXT=$1
+
+    for SIZE in ${SIZES[@]}
+    do
+        echo "Rendering icons $CONTEXT.svg @$SIZE" >&2
+        for OBJECT_ID in `cat <($INKSCAPE -S $CONTEXT.svg | grep -E "_$SIZE" | sed 's/\,.*$//')`
+        do
+            local ICON_NAME=$(sed "s/\_$SIZE.*$//" <<< $OBJECT_ID)
+
+            echo \
+                "--export-id=$OBJECT_ID" \
+                "--export-id-only" \
+                "--export-png=$THEMEDIR/$CONTEXT/$SIZE/$ICON_NAME.png $CONTEXT.svg"
+    
+            echo \
+                "--export-id=$OBJECT_ID" \
+                "--export-dpi=180" \
+                "--export-id-only" \
+                "--export-png=$THEMEDIR/$CONTEXT/$SIZE@2x/$ICON_NAME.png $CONTEXT.svg"
+        done
+    done
+}
+
+for CONTEXT in ${TYPES[@]}
+do
+    # Only render out the icons if the svg-file has been modified
+    # since we finished rendering it out last.
+    if [[ $CONTEXT.svg -nt .${CONTEXT}_timestamp ]]
+    then
+        genInkscapeCmds $CONTEXT | $INKSCAPE --shell > /dev/null && touch .${CONTEXT}_timestamp &
+    else
+        echo "No changes to $CONTEXT.svg, skipping..."
+    fi
+done
+
+wait
+
+# Remove all empty directories from the theme folder.
+find $THEMEDIR -type d -empty -delete
