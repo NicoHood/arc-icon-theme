@@ -68,13 +68,12 @@ do
     # since we finished rendering it out last.
     if [[ $CONTEXT.svg -nt .${CONTEXT}_timestamp ]]
     then
-        genInkscapeCmds $CONTEXT | $INKSCAPE --shell > /dev/null && touch .${CONTEXT}_timestamp &
+        echo "Rendering icons from $CONTEXT.svg"
+        genInkscapeCmds $CONTEXT | java SplitJob $INKSCAPE --shell && touch .${CONTEXT}_timestamp
     else
         echo "No changes to $CONTEXT.svg, skipping..."
     fi
 done
-
-wait
 
 # Remove all empty directories from the theme folder.
 find $THEMEDIR -type d -empty -delete
