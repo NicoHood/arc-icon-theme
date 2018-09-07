@@ -9,3 +9,5 @@ configure
 install-sh
 missing
 *.tmp
+*_timestamp
+*.cache
