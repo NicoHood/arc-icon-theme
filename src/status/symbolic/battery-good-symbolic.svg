@@ -13,7 +13,7 @@
    height="16"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    version="1.0"
    sodipodi:docname="battery-good-symbolic.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
@@ -27,40 +27,45 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="10.118506"
-     inkscape:cx="-48.007593"
-     inkscape:cy="4.7777456"
+     inkscape:zoom="28.619457"
+     inkscape:cx="0.093260854"
+     inkscape:cy="8.2143077"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:showpageshadow="false"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1029"
+     inkscape:window-width="1440"
+     inkscape:window-height="1566"
      inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-y="54"
+     inkscape:window-maximized="0">
     <sodipodi:guide
        orientation="1,0"
        position="0,112"
-       id="guide2383" />
+       id="guide2383"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="0,1"
        position="26.278146,128"
-       id="guide2385" />
+       id="guide2385"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="1,0"
        position="128,54.082119"
-       id="guide2387" />
+       id="guide2387"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="0,1"
        position="78.156291,0"
-       id="guide2389" />
+       id="guide2389"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="0,1"
        position="60.863576,64.084768"
-       id="guide2391" />
+       id="guide2391"
+       inkscape:locked="false" />
     <inkscape:grid
        type="xygrid"
        id="grid3672"
@@ -118,8 +123,8 @@
        id="rect3771"
        inkscape:connector-curvature="0" />
     <path
-       style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 3,11 0,9 c 0,0.554 0.446,1 1,1 l 8,0 c 0.554,0 1,-0.446 1,-1 l 0,-9 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.69328022;marker:none;enable-background:accumulate"
+       d="m 3,14 v 6.3 C 3,20.6878 3.446,21 4,21 h 8 c 0.554,0 1,-0.3122 1,-0.7 V 14 Z"
        id="path3002"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssscc" />

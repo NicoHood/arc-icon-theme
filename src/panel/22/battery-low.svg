@@ -13,7 +13,7 @@
    height="22"
    id="svg2"
    sodipodi:version="0.32"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
    version="1.0"
    sodipodi:docname="battery-low.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
@@ -27,40 +27,45 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.179476"
-     inkscape:cx="4.1493231"
-     inkscape:cy="-6.7196199"
+     inkscape:zoom="63.240666"
+     inkscape:cx="8.4136027"
+     inkscape:cy="5.0082363"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:showpageshadow="false"
      showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1029"
+     inkscape:window-width="2880"
+     inkscape:window-height="1566"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="54"
      inkscape:window-maximized="1">
     <sodipodi:guide
        orientation="1,0"
        position="0,112"
-       id="guide2383" />
+       id="guide2383"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="0,1"
        position="26.278146,128"
-       id="guide2385" />
+       id="guide2385"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="1,0"
        position="128,54.082119"
-       id="guide2387" />
+       id="guide2387"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="0,1"
        position="78.156291,0"
-       id="guide2389" />
+       id="guide2389"
+       inkscape:locked="false" />
     <sodipodi:guide
        orientation="0,1"
        position="60.863576,64.084768"
-       id="guide2391" />
+       id="guide2391"
+       inkscape:locked="false" />
     <inkscape:grid
        type="xygrid"
        id="grid3672"
@@ -77,7 +82,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -92,8 +97,8 @@
        id="path3000"
        inkscape:connector-curvature="0" />
     <path
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ececec;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;enable-background:accumulate"
-       d="m 6,11 0,6 c 0,0.554 0.446,1 1,1 l 8,0 c 0.554,0 1,-0.446 1,-1 l 0,-6 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ececec;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6.04743147;marker:none;enable-background:accumulate"
+       d="m 6,14 v 3.428571 C 6,17.745143 6.446,18 7,18 h 8 c 0.554,0 1,-0.254857 1,-0.571429 V 14 Z"
        id="path3002"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssscc" />

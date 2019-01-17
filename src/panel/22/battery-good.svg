@@ -15,7 +15,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.91 r13725"
    version="1.0"
-   sodipodi:docname="battery-good.svg"
+   sodipodi:docname="battery-low.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    style="display:inline">
   <defs
@@ -27,9 +27,9 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="10.118506"
-     inkscape:cx="11.783843"
-     inkscape:cy="0.42927706"
+     inkscape:zoom="11.179476"
+     inkscape:cx="4.1493231"
+     inkscape:cy="-6.7196199"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -93,7 +93,7 @@
        inkscape:connector-curvature="0" />
     <path
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ececec;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;enable-background:accumulate"
-       d="m 6,8 0,9 c 0,0.554 0.446,1 1,1 l 8,0 c 0.554,0 1,-0.446 1,-1 l 0,-9 z"
+       d="m 6,11 0,6 c 0,0.554 0.446,1 1,1 l 8,0 c 0.554,0 1,-0.446 1,-1 l 0,-6 z"
        id="path3002"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="csssscc" />
