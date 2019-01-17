@@ -15,7 +15,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.91 r13725"
    version="1.0"
-   sodipodi:docname="battery-low-charging.svg"
+   sodipodi:docname="battery-caution-charging.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    style="display:inline">
   <defs
@@ -27,12 +27,12 @@
      borderopacity="1"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="15.810166"
-     inkscape:cx="11.551736"
-     inkscape:cy="5.9799276"
+     inkscape:zoom="22.627417"
+     inkscape:cx="5.677872"
+     inkscape:cy="9.1183332"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="true"
+     showgrid="false"
      inkscape:showpageshadow="false"
      showguides="false"
      inkscape:guide-bbox="true"
@@ -40,7 +40,11 @@
      inkscape:window-height="1029"
      inkscape:window-x="0"
      inkscape:window-y="24"
-     inkscape:window-maximized="1">
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     inkscape:object-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-bbox-midpoints="true">
     <sodipodi:guide
        orientation="1,0"
        position="0,112"
@@ -93,7 +97,7 @@
        inkscape:connector-curvature="0" />
     <path
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ececec;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;enable-background:accumulate"
-       d="m 6,11 0,6 c 0,0.554 0.446,1 1,1 l 8,0 c 0.554,0 1,-0.446 1,-1 L 16,11 12.65625,11 14,13 11.53125,13 12,17 8,11 6,11 Z"
+       d="m 6,14 0,3 c 0,0.554 0.446,1 1,1 l 8,0 c 0.554,0 1,-0.446 1,-1 L 16,14 11.65625,14 12,17 10,14 6,14 Z"
        id="path3002"
        inkscape:connector-curvature="0" />
   </g>
